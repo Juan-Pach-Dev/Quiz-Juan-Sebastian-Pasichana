@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Quiz_Juan_Sebastian_Pasichana
 {
-    public partial class FormularioQuiz : Form
+    public partial class Home : Form
     {
-        public FormularioQuiz()
+        public Home()
         {
             InitializeComponent();
         }
+
     }
 }

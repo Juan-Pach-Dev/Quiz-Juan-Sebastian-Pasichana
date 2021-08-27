@@ -16,7 +16,7 @@ namespace Quiz_Juan_Sebastian_Pasichana
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormularioQuiz());
+            Application.Run(new Home());
         }
     }
 }
