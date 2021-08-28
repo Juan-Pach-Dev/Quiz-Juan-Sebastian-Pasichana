@@ -37,18 +37,14 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.lblPelicula = new System.Windows.Forms.Label();
             this.txtNombrepelicula = new System.Windows.Forms.TextBox();
             this.lblPuntuación = new System.Windows.Forms.Label();
-            this.pnlResultados = new System.Windows.Forms.Panel();
-            this.rbtnMala = new System.Windows.Forms.RadioButton();
-            this.rbtnRegular = new System.Windows.Forms.RadioButton();
-            this.rbtnExcelente = new System.Windows.Forms.RadioButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnRichTextBox = new System.Windows.Forms.Button();
-            this.lstbAlmacenamiento = new System.Windows.Forms.ListBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblGenero = new System.Windows.Forms.Label();
-            this.rdbMasculino = new System.Windows.Forms.RadioButton();
-            this.rdbFemenino = new System.Windows.Forms.RadioButton();
-            this.pnlResultados.SuspendLayout();
+            this.txtguardar = new System.Windows.Forms.TextBox();
+            this.rchAlmacenamiento = new System.Windows.Forms.RichTextBox();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -119,49 +115,6 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.lblPuntuación.TabIndex = 7;
             this.lblPuntuación.Text = "Puntuación de la película:";
             // 
-            // pnlResultados
-            // 
-            this.pnlResultados.Controls.Add(this.rbtnMala);
-            this.pnlResultados.Controls.Add(this.rbtnRegular);
-            this.pnlResultados.Controls.Add(this.rbtnExcelente);
-            this.pnlResultados.Location = new System.Drawing.Point(19, 356);
-            this.pnlResultados.Name = "pnlResultados";
-            this.pnlResultados.Size = new System.Drawing.Size(340, 95);
-            this.pnlResultados.TabIndex = 8;
-            // 
-            // rbtnMala
-            // 
-            this.rbtnMala.AutoSize = true;
-            this.rbtnMala.Location = new System.Drawing.Point(3, 63);
-            this.rbtnMala.Name = "rbtnMala";
-            this.rbtnMala.Size = new System.Drawing.Size(65, 24);
-            this.rbtnMala.TabIndex = 11;
-            this.rbtnMala.TabStop = true;
-            this.rbtnMala.Text = "Mala";
-            this.rbtnMala.UseVisualStyleBackColor = true;
-            // 
-            // rbtnRegular
-            // 
-            this.rbtnRegular.AutoSize = true;
-            this.rbtnRegular.Location = new System.Drawing.Point(3, 33);
-            this.rbtnRegular.Name = "rbtnRegular";
-            this.rbtnRegular.Size = new System.Drawing.Size(90, 24);
-            this.rbtnRegular.TabIndex = 10;
-            this.rbtnRegular.TabStop = true;
-            this.rbtnRegular.Text = "Regular";
-            this.rbtnRegular.UseVisualStyleBackColor = true;
-            // 
-            // rbtnExcelente
-            // 
-            this.rbtnExcelente.AutoSize = true;
-            this.rbtnExcelente.Location = new System.Drawing.Point(3, 3);
-            this.rbtnExcelente.Name = "rbtnExcelente";
-            this.rbtnExcelente.Size = new System.Drawing.Size(106, 24);
-            this.rbtnExcelente.TabIndex = 9;
-            this.rbtnExcelente.TabStop = true;
-            this.rbtnExcelente.Text = "Excelente";
-            this.rbtnExcelente.UseVisualStyleBackColor = true;
-            // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(15, 475);
@@ -170,6 +123,7 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnRichTextBox
             // 
@@ -179,15 +133,7 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.btnRichTextBox.TabIndex = 10;
             this.btnRichTextBox.Text = "Report";
             this.btnRichTextBox.UseVisualStyleBackColor = true;
-            // 
-            // lstbAlmacenamiento
-            // 
-            this.lstbAlmacenamiento.FormattingEnabled = true;
-            this.lstbAlmacenamiento.ItemHeight = 20;
-            this.lstbAlmacenamiento.Location = new System.Drawing.Point(615, 61);
-            this.lstbAlmacenamiento.Name = "lstbAlmacenamiento";
-            this.lstbAlmacenamiento.Size = new System.Drawing.Size(581, 444);
-            this.lstbAlmacenamiento.TabIndex = 11;
+            this.btnRichTextBox.Click += new System.EventHandler(this.btnRichTextBox_Click);
             // 
             // dtpFecha
             // 
@@ -204,29 +150,41 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(53, 16);
             this.lblGenero.TabIndex = 12;
-            this.lblGenero.Text = "Género";
+            this.lblGenero.Text = "Genero";
             // 
-            // rdbMasculino
+            // txtguardar
             // 
-            this.rdbMasculino.AutoSize = true;
-            this.rdbMasculino.Location = new System.Drawing.Point(19, 205);
-            this.rdbMasculino.Name = "rdbMasculino";
-            this.rdbMasculino.Size = new System.Drawing.Size(107, 24);
-            this.rdbMasculino.TabIndex = 13;
-            this.rdbMasculino.TabStop = true;
-            this.rdbMasculino.Text = "Masculino";
-            this.rdbMasculino.UseVisualStyleBackColor = true;
+            this.txtguardar.Location = new System.Drawing.Point(773, 42);
+            this.txtguardar.Name = "txtguardar";
+            this.txtguardar.Size = new System.Drawing.Size(231, 26);
+            this.txtguardar.TabIndex = 15;
             // 
-            // rdbFemenino
+            // rchAlmacenamiento
             // 
-            this.rdbFemenino.AutoSize = true;
-            this.rdbFemenino.Location = new System.Drawing.Point(250, 205);
-            this.rdbFemenino.Name = "rdbFemenino";
-            this.rdbFemenino.Size = new System.Drawing.Size(106, 24);
-            this.rdbFemenino.TabIndex = 14;
-            this.rdbFemenino.TabStop = true;
-            this.rdbFemenino.Text = "Femenino";
-            this.rdbFemenino.UseVisualStyleBackColor = true;
+            this.rchAlmacenamiento.Location = new System.Drawing.Point(623, 80);
+            this.rchAlmacenamiento.Name = "rchAlmacenamiento";
+            this.rchAlmacenamiento.Size = new System.Drawing.Size(483, 361);
+            this.rchAlmacenamiento.TabIndex = 16;
+            this.rchAlmacenamiento.Text = "";
+            // 
+            // cmbGenero
+            // 
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Maculino",
+            "Femenino"});
+            this.cmbGenero.Location = new System.Drawing.Point(19, 201);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(121, 28);
+            this.cmbGenero.TabIndex = 17;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(19, 353);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 88);
+            this.checkedListBox1.TabIndex = 18;
             // 
             // Home
             // 
@@ -235,13 +193,13 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1333, 692);
-            this.Controls.Add(this.rdbFemenino);
-            this.Controls.Add(this.rdbMasculino);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.cmbGenero);
+            this.Controls.Add(this.rchAlmacenamiento);
+            this.Controls.Add(this.txtguardar);
             this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.lstbAlmacenamiento);
             this.Controls.Add(this.btnRichTextBox);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.pnlResultados);
             this.Controls.Add(this.lblPuntuación);
             this.Controls.Add(this.txtNombrepelicula);
             this.Controls.Add(this.lblPelicula);
@@ -254,8 +212,6 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Home";
             this.Text = "Home";
-            this.pnlResultados.ResumeLayout(false);
-            this.pnlResultados.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,16 +226,13 @@ namespace Quiz_Juan_Sebastian_Pasichana
         private System.Windows.Forms.Label lblPelicula;
         private System.Windows.Forms.TextBox txtNombrepelicula;
         private System.Windows.Forms.Label lblPuntuación;
-        private System.Windows.Forms.Panel pnlResultados;
-        private System.Windows.Forms.RadioButton rbtnMala;
-        private System.Windows.Forms.RadioButton rbtnRegular;
-        private System.Windows.Forms.RadioButton rbtnExcelente;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnRichTextBox;
-        private System.Windows.Forms.ListBox lstbAlmacenamiento;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.RadioButton rdbMasculino;
-        private System.Windows.Forms.RadioButton rdbFemenino;
+        private System.Windows.Forms.TextBox txtguardar;
+        private System.Windows.Forms.RichTextBox rchAlmacenamiento;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
