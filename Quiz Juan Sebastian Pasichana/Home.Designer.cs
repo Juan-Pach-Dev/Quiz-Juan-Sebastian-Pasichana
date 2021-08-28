@@ -31,17 +31,19 @@ namespace Quiz_Juan_Sebastian_Pasichana
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.panel1.SuspendLayout();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblAsistencia = new System.Windows.Forms.Label();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblPelicula = new System.Windows.Forms.Label();
+            this.txtNombrepelicula = new System.Windows.Forms.TextBox();
+            this.lblPuntuación = new System.Windows.Forms.Label();
+            this.pnlResultados = new System.Windows.Forms.Panel();
+            this.rbtnExcelente = new System.Windows.Forms.RadioButton();
+            this.rbtnRegular = new System.Windows.Forms.RadioButton();
+            this.rbtnMala = new System.Windows.Forms.RadioButton();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pnlResultados.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -68,99 +70,117 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nombre y Apellido del asistente:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(16, 80);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(340, 26);
+            this.txtNombre.TabIndex = 2;
             // 
-            // label1
+            // lblAsistencia
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Día de la asistencia";
+            this.lblAsistencia.AutoSize = true;
+            this.lblAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsistencia.Location = new System.Drawing.Point(13, 120);
+            this.lblAsistencia.Name = "lblAsistencia";
+            this.lblAsistencia.Size = new System.Drawing.Size(126, 16);
+            this.lblAsistencia.TabIndex = 3;
+            this.lblAsistencia.Text = "Día de la asistencia";
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 139);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(340, 26);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dtpFecha.Location = new System.Drawing.Point(16, 139);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(340, 26);
+            this.dtpFecha.TabIndex = 4;
             // 
-            // label2
+            // lblPelicula
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Nombre de la pelicula:";
+            this.lblPelicula.AutoSize = true;
+            this.lblPelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPelicula.Location = new System.Drawing.Point(12, 186);
+            this.lblPelicula.Name = "lblPelicula";
+            this.lblPelicula.Size = new System.Drawing.Size(143, 16);
+            this.lblPelicula.TabIndex = 5;
+            this.lblPelicula.Text = "Nombre de la pelicula:";
             // 
-            // textBox2
+            // txtNombrepelicula
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 205);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(340, 26);
-            this.textBox2.TabIndex = 6;
+            this.txtNombrepelicula.Location = new System.Drawing.Point(16, 205);
+            this.txtNombrepelicula.Name = "txtNombrepelicula";
+            this.txtNombrepelicula.Size = new System.Drawing.Size(340, 26);
+            this.txtNombrepelicula.TabIndex = 6;
             // 
-            // label3
+            // lblPuntuación
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 16);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Puntuación de la película:";
+            this.lblPuntuación.AutoSize = true;
+            this.lblPuntuación.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuntuación.Location = new System.Drawing.Point(12, 252);
+            this.lblPuntuación.Name = "lblPuntuación";
+            this.lblPuntuación.Size = new System.Drawing.Size(160, 16);
+            this.lblPuntuación.TabIndex = 7;
+            this.lblPuntuación.Text = "Puntuación de la película:";
             // 
-            // panel1
+            // pnlResultados
             // 
-            this.panel1.Controls.Add(this.radioButton3);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(16, 272);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 95);
-            this.panel1.TabIndex = 8;
+            this.pnlResultados.Controls.Add(this.rbtnMala);
+            this.pnlResultados.Controls.Add(this.rbtnRegular);
+            this.pnlResultados.Controls.Add(this.rbtnExcelente);
+            this.pnlResultados.Location = new System.Drawing.Point(16, 272);
+            this.pnlResultados.Name = "pnlResultados";
+            this.pnlResultados.Size = new System.Drawing.Size(340, 95);
+            this.pnlResultados.TabIndex = 8;
             // 
-            // radioButton1
+            // rbtnExcelente
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 24);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Excelente";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnExcelente.AutoSize = true;
+            this.rbtnExcelente.Location = new System.Drawing.Point(3, 3);
+            this.rbtnExcelente.Name = "rbtnExcelente";
+            this.rbtnExcelente.Size = new System.Drawing.Size(106, 24);
+            this.rbtnExcelente.TabIndex = 9;
+            this.rbtnExcelente.TabStop = true;
+            this.rbtnExcelente.Text = "Excelente";
+            this.rbtnExcelente.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnRegular
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(3, 33);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 24);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Regular";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnRegular.AutoSize = true;
+            this.rbtnRegular.Location = new System.Drawing.Point(3, 33);
+            this.rbtnRegular.Name = "rbtnRegular";
+            this.rbtnRegular.Size = new System.Drawing.Size(90, 24);
+            this.rbtnRegular.TabIndex = 10;
+            this.rbtnRegular.TabStop = true;
+            this.rbtnRegular.Text = "Regular";
+            this.rbtnRegular.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtnMala
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(3, 63);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(65, 24);
-            this.radioButton3.TabIndex = 11;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Mala";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtnMala.AutoSize = true;
+            this.rbtnMala.Location = new System.Drawing.Point(3, 63);
+            this.rbtnMala.Name = "rbtnMala";
+            this.rbtnMala.Size = new System.Drawing.Size(65, 24);
+            this.rbtnMala.TabIndex = 11;
+            this.rbtnMala.TabStop = true;
+            this.rbtnMala.Text = "Mala";
+            this.rbtnMala.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(15, 448);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 35);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(226, 448);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 35);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "RichTextBox";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -168,21 +188,23 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1333, 692);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.pnlResultados);
+            this.Controls.Add(this.lblPuntuación);
+            this.Controls.Add(this.txtNombrepelicula);
+            this.Controls.Add(this.lblPelicula);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.lblAsistencia);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Home";
             this.Text = "Home";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlResultados.ResumeLayout(false);
+            this.pnlResultados.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,15 +214,17 @@ namespace Quiz_Juan_Sebastian_Pasichana
 
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblAsistencia;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblPelicula;
+        private System.Windows.Forms.TextBox txtNombrepelicula;
+        private System.Windows.Forms.Label lblPuntuación;
+        private System.Windows.Forms.Panel pnlResultados;
+        private System.Windows.Forms.RadioButton rbtnMala;
+        private System.Windows.Forms.RadioButton rbtnRegular;
+        private System.Windows.Forms.RadioButton rbtnExcelente;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button button2;
     }
 }
