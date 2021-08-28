@@ -38,13 +38,13 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.txtNombrepelicula = new System.Windows.Forms.TextBox();
             this.lblPuntuación = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnRichTextBox = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblGenero = new System.Windows.Forms.Label();
             this.txtguardar = new System.Windows.Forms.TextBox();
             this.rchAlmacenamiento = new System.Windows.Forms.RichTextBox();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.chkPuntuación = new System.Windows.Forms.CheckedListBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -125,16 +125,6 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnRichTextBox
-            // 
-            this.btnRichTextBox.Location = new System.Drawing.Point(226, 475);
-            this.btnRichTextBox.Name = "btnRichTextBox";
-            this.btnRichTextBox.Size = new System.Drawing.Size(130, 35);
-            this.btnRichTextBox.TabIndex = 10;
-            this.btnRichTextBox.Text = "Report";
-            this.btnRichTextBox.UseVisualStyleBackColor = true;
-            this.btnRichTextBox.Click += new System.EventHandler(this.btnRichTextBox_Click);
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Location = new System.Drawing.Point(19, 139);
@@ -178,13 +168,27 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.cmbGenero.Size = new System.Drawing.Size(121, 28);
             this.cmbGenero.TabIndex = 17;
             // 
-            // checkedListBox1
+            // chkPuntuación
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(19, 353);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 88);
-            this.checkedListBox1.TabIndex = 18;
+            this.chkPuntuación.FormattingEnabled = true;
+            this.chkPuntuación.Items.AddRange(new object[] {
+            "Excelente",
+            "Regular",
+            "Mala"});
+            this.chkPuntuación.Location = new System.Drawing.Point(19, 353);
+            this.chkPuntuación.Name = "chkPuntuación";
+            this.chkPuntuación.Size = new System.Drawing.Size(140, 88);
+            this.chkPuntuación.TabIndex = 18;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(263, 475);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(96, 35);
+            this.btnReport.TabIndex = 19;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Home
             // 
@@ -193,12 +197,12 @@ namespace Quiz_Juan_Sebastian_Pasichana
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1333, 692);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.btnReport);
+            this.Controls.Add(this.chkPuntuación);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.rchAlmacenamiento);
             this.Controls.Add(this.txtguardar);
             this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.btnRichTextBox);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblPuntuación);
             this.Controls.Add(this.txtNombrepelicula);
@@ -227,12 +231,12 @@ namespace Quiz_Juan_Sebastian_Pasichana
         private System.Windows.Forms.TextBox txtNombrepelicula;
         private System.Windows.Forms.Label lblPuntuación;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnRichTextBox;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.TextBox txtguardar;
         private System.Windows.Forms.RichTextBox rchAlmacenamiento;
         private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox chkPuntuación;
+        private System.Windows.Forms.Button btnReport;
     }
 }

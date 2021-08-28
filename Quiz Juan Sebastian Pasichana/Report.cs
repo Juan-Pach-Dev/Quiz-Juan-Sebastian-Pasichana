@@ -24,7 +24,7 @@ namespace Quiz_Juan_Sebastian_Pasichana
         public Report(String text)
         {
             InitializeComponent();
-
+            rchtalmacenar.Text = text;
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Quiz_Juan_Sebastian_Pasichana
             // 
             // rchtalmacenar
             // 
-            this.rchtalmacenar.Location = new System.Drawing.Point(300, 77);
+            this.rchtalmacenar.Location = new System.Drawing.Point(296, 64);
             this.rchtalmacenar.Name = "rchtalmacenar";
             this.rchtalmacenar.Size = new System.Drawing.Size(309, 387);
             this.rchtalmacenar.TabIndex = 1;

@@ -19,8 +19,12 @@ namespace Quiz_Juan_Sebastian_Pasichana
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            rchAlmacenamiento.Text = txtNombre.Text + "\n" + dtpFecha.Text + "\n" + lblGenero + "\n" + cmbGenero.Text + "\n" + txtNombrepelicula + "\n" + pnlResultados ;
-
+            int Index = chkPuntuación.SelectedIndex;
+            if (Index != -1)
+            {
+                rchAlmacenamiento.Text = txtNombre.Text + "\n" + dtpFecha.Text + "\n" + lblGenero + "\n" + cmbGenero.Text + "\n" + txtNombrepelicula + "\n" + chkPuntuación.Items[Index].ToString(); 
+            }
+            
 
 
           
@@ -32,13 +36,14 @@ namespace Quiz_Juan_Sebastian_Pasichana
         }
     }
 
-        private void btnRichTextBox_Click(object sender, EventArgs e)
+        
+        
+
+        private void btnReport_Click(object sender, EventArgs e)
         {
             String reporte = rchAlmacenamiento.Text;
             Form Formulario = new Report(reporte);
             Formulario.Show();
         }
-
-        
     }
     }
