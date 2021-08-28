@@ -16,6 +16,5 @@ namespace Quiz_Juan_Sebastian_Pasichana
         {
             InitializeComponent();
         }
-
     }
 }
